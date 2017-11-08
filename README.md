@@ -1,7 +1,7 @@
 # Introduksjon
 
 # Forberedelser
-Vi benytter oss av det råeste og nyeste AWS har og tilby av funksjoner. Det er derfor nødvendig å installere nyeste versjon av: 
+Vi benytter oss av det råeste og nyeste AWS har å tilby av funksjoner. Det er derfor nødvendig å installere nyeste versjon av: 
 * aws-cli (min 1.11)
 * docker (nyeste versjon)
 
