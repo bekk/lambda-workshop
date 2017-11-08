@@ -11,7 +11,7 @@
         "object": {
           "eTag": "0123456789abcdef0123456789abcdef",
           "sequencer": "0A1B2C3D4E5F678901",
-          "key": "f251a974ab0b0fb3a56795c695509731",
+          "key": "trips-2017.10.1-2017.10.31.json",
           "size": 1024
         },
         "bucket": {

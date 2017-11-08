@@ -14,6 +14,10 @@ Resources:
           Properties:
             Bucket: !Ref Bucket
             Events: s3:ObjectCreated:*
+      Timeout: 120
+      MemorySize: 512
 
   Bucket:
     Type: AWS::S3::Bucket
+    Properties:
+      BucketName: lambda-workshop-s3

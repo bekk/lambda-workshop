@@ -15,7 +15,7 @@ exports.handler = (event, context, callback) => {
     const key = decodeURIComponent(event.Records[0].s3.object.key.replace(/\+/g, ' '));
     const params = {
         Bucket: bucket,
-        Key: key,
+        Key: key
     };
     s3.getObject(params, (err, data) => {
         if (err) {
@@ -24,8 +24,10 @@ exports.handler = (event, context, callback) => {
             console.log(message);
             callback(message);
         } else {
-            console.log('CONTENT TYPE:', data.ContentType);
-            callback(null, data.ContentType);
+            const trips = JSON.parse(data.Body.toString()).trips;
+            const nrOfTripsFromVippetangen = trips.filter(elem => elem.start_station_id === 249).length;
+            console.log(`nrOfTrips: ${nrOfTripsFromVippetangen}`);
+            callback(null, nrOfTripsFromVippetangen);
         }
     });
 };
