@@ -12,8 +12,8 @@ Vi benytter oss av det råeste og nyeste AWS har å tilby av funksjoner. Det er 
     3. Velg "Author from scratch" og fyll inn navn. 
     4. Create custome role (lambda_basic_execution)
     5. Lag testevent og test lambdafunksjonen
-    6. Endre lambdafunksjonen og testeventen slik at responsen inneholder navnet fra eventen.
-    7. Sjekk monitoring for å se CloudWatch metric
+    6. Legg til et felt ´navn´ i testeventen. Endre lambdafunksjonen slik at responsen inneholder navnet.
+    7. Legg til en miljøvariabel og ta den i bruk i lambdafunksjonen.
 
 4. Oppgave der du utvikler lokalt.
     1. Oppsett av AWS Cli
