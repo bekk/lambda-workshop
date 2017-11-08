@@ -69,4 +69,4 @@ Det er et krav fra kunden at outputen fra lambdaen skal postes som en melding ti
 
 NB! Husk å:
 * Sett ditt eget valgfrie username i config.js.
-* Spesifiser slack sin webhook-url i environments.
+* Spesifiser slack sin webhook-url i environments. Denne har vi postet på slack :)
