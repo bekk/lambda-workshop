@@ -5,6 +5,10 @@ exports.sendSlackNotification = function(title, msg) {
     if (!config.slack.username) {
         throw new Error("Sett brukernavnet ditt i ./config.js 🤓")
     }
+    if (process.env.AWS_SAM_LOCAL === 'true') {
+        console.log("⛔️  Posting til slack lokalt fungerer ikke ⛔️. Prøv å deploy lambdaen din til skyen 🌤!");
+        return;
+    }
 
     const attachment = getAttachment(title, msg);
     const requestOptions = {
