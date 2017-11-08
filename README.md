@@ -31,5 +31,12 @@
         }
         ```
         13. Legg til et breakpoint et sted inne lambda-funksjonen. Kall funksjonen ved å laste siden på nytt eller ved å bruke en REST-klient (f.eks. Postman eller Advanced Rest Client). Sjekk at eksekveringen av koden stopper ved breakpointet og at du kan inspisere variabler o.l.
+        14. For å deploye til AWS må man først opprette en S3-bøtte som man kan laste opp lambda-funksjonen til. Følgende kommando laster opp lambda-funksjonen til S3 og lager en template fil som peker på hvor lambda-filen ligger. 
+        
+            `sam package --template-file template.yaml --s3-bucket ${nameOfS3Bucket} --output-template-file packaged.yaml`
+            
+        For å deploye lambda-funksjonen og API Gateway kjører man følgende kommando.
+        
+            `sam deploy --template-file packaged.yaml --stack-name ${nameOfYourNewStack} --capabilities CAPABILITY_IAM`
 
 5. Oppgave der du kjører mye data og/eller beregninger med Lambda. 
