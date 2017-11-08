@@ -16,3 +16,6 @@ Resources:
           Properties:
             Path: /
             Method: any
+      Environment:
+        Variables:
+          SLACK_WEBHOOK: Erstattmeg
