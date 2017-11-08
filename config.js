@@ -1,0 +1,3 @@
+exports.slack = {
+    username: 'Joakim'
+};
