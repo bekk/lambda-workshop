@@ -15,8 +15,8 @@
           "size": 1024
         },
         "bucket": {
-          "arn": "arn:aws:s3:::lambda-workshop",
-          "name": "lambda-workshop",
+          "arn": "arn:aws:s3:::lambda-workshop-s3",
+          "name": "lambda-workshop-s3",
           "ownerIdentity": {
             "principalId": "EXAMPLE"
           }

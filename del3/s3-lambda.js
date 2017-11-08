@@ -24,10 +24,22 @@ exports.handler = (event, context, callback) => {
             console.log(message);
             callback(message);
         } else {
-            const trips = JSON.parse(data.Body.toString()).trips;
+            const body = JSON.parse(data.Body.toString());
+            const trips = body.trips;
             const nrOfTripsFromVippetangen = trips.filter(elem => elem.start_station_id === 249).length;
-            console.log(`nrOfTrips: ${nrOfTripsFromVippetangen}`);
-            callback(null, nrOfTripsFromVippetangen);
+            console.log(`Total number of trips from Vippetangen: ${nrOfTripsFromVippetangen}`);
+            const mapOfNrOfTripsToStop = trips.reduce((map, trip) => {
+                if (trip.start_station_id === 249) {
+                    map[trip.end_station_id] = (map[trip.end_station_id] || 0) + 1;
+                }
+                return map;
+            }, {});
+            const mostPopularStop = Object.keys(mapOfNrOfTripsToStop).reduce((mostPopular, stopId) => {
+                const tripsToStop = mapOfNrOfTripsToStop[stopId];
+                return mostPopular.trips >= tripsToStop ? mostPopular : {id: stopId, trips: tripsToStop};
+            }, {id: -1, trips: 0})
+            console.log(`Most popular trip: ${JSON.stringify(mostPopularStop)}`);
+            callback(null, 'Done');
         }
     });
 };
