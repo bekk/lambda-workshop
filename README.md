@@ -59,3 +59,5 @@ Vi benytter oss av det råeste og nyeste AWS har å tilby av funksjoner. Det er 
             `sam deploy --template-file packaged.yaml --stack-name ${nameOfYourNewStack} --capabilities CAPABILITY_IAM`
 
 5. Oppgave der du kjører mye data og/eller beregninger med Lambda. 
+
+Test your S3 lambda by running "sam local invoke 'S3Function' -e s3-event.json --template s3-template.yaml"
