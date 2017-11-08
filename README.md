@@ -3,7 +3,7 @@
 # Forberedelser
 Vi benytter oss av det råeste og nyeste AWS har og tilby av funksjoner. Det er derfor nødvendig å installere nyeste versjon av: 
 * aws-cli (min 1.11)
-* docker (Nyeste)
+* docker (nyeste versjon)
 
 # Oppgave 1 - Hello World
 3. Hello World oppgave med lambda. Bli kjent med interfacet og hva lambda er. Lage et endepunkt for en frontend-tjeneste.
