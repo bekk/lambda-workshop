@@ -7,6 +7,14 @@ Vi benytter oss av det råeste og nyeste AWS har å tilby av funksjoner. Det er 
 
 # Oppgave 1 - Hello World
 3. Hello World oppgave med lambda. Bli kjent med interfacet og hva lambda er. Lage et endepunkt for en frontend-tjeneste.
+    1. Gå til Lambda i AWS Management Console 
+    2. Velg "Create a function"
+    3. Velg "Author from scratch" og fyll inn navn. 
+    4. Create custome role (lambda_basic_execution)
+    5. Lag testevent og test lambdafunksjonen
+    6. Endre lambdafunksjonen og testeventen slik at responsen inneholder navnet fra eventen.
+    7. Sjekk monitoring for å se CloudWatch metric
+
 4. Oppgave der du utvikler lokalt.
     1. Oppsett av AWS Cli
     2. Få hello world til å kjøre ?
