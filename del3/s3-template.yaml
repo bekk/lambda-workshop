@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: A function is triggered off an upload to a bucket. It logs the content type of the uploaded object.
+Resources:
+  S3Function:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: s3-lambda.handler
+      Runtime: nodejs6.10
+      Policies: AmazonS3ReadOnlyAccess
+      Events:
+        DataUpload:
+          Type: S3
+          Properties:
+            Bucket: !Ref Bucket
+            Events: s3:ObjectCreated:*
+
+  Bucket:
+    Type: AWS::S3::Bucket
