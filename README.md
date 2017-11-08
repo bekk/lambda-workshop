@@ -61,3 +61,12 @@ Vi benytter oss av det råeste og nyeste AWS har å tilby av funksjoner. Det er 
 5. Oppgave der du kjører mye data og/eller beregninger med Lambda. 
 
 Test your S3 lambda by running "sam local invoke 'S3Function' -e s3-event.json --template s3-template.yaml"
+
+
+
+## Post til slack!
+Det er et krav fra kunden at outputen fra lambdaen skal postes som en melding til slack. Heldigvis for deg har et tidligere konsulenthus glemt igjen filen 'slack.js' i repositoriet vårt. Denne tilbyr en funksjon som gjør nettopp dette. Importer denne filen inn i index.js.
+
+NB! Husk å:
+* Sett ditt eget valgfrie username i config.js.
+* Spesifiser slack sin webhook-url i environments. Denne har vi postet på slack :)
