@@ -1,23 +1,24 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: A function is triggered off an upload to a bucket. It logs the content type of the uploaded object.
+Description: Trigger a lambda with an upload to a specific bucket
 Resources:
   S3Function:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: s3-lambda.handler
+      Handler: # TODO: Point to your lambda
       Runtime: nodejs6.10
       Policies: AmazonS3ReadOnlyAccess
       Events:
         DataUpload:
           Type: S3
           Properties:
-            Bucket: !Ref Bucket
+            Bucket: !Ref Bucket # This points to the bucket declared below
             Events: s3:ObjectCreated:*
-      Timeout: 120
-      MemorySize: 512
+      # TODO: Adjust the following properties based on your local invocations. They are probably way too high.
+      Timeout: 300
+      MemorySize: 1024
 
   Bucket:
     Type: AWS::S3::Bucket
     Properties:
-      BucketName: lambda-workshop-s3
+      BucketName: # TODO: Insert name of S3 bucket

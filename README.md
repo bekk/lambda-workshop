@@ -4,6 +4,9 @@
 Vi benytter oss av det råeste og nyeste AWS har å tilby av funksjoner. Det er derfor nødvendig å installere nyeste versjon av: 
 * aws-cli (min 1.11)
 * docker (nyeste versjon)
+* Sjekk at git-repoet er en undermappe av en av mappene som er i listen under fanen "File Sharing" i Docker sine innstillinger.
+* npm install -g aws-sam-local
+* Verifiser at installasjonen var vellykket ved å kjøre "sam --version"
 
 # Oppgave 1 - Hello World
 3. Hello World oppgave med lambda. Bli kjent med interfacet og hva lambda er. Lage et endepunkt for en frontend-tjeneste.
@@ -15,15 +18,13 @@ Vi benytter oss av det råeste og nyeste AWS har å tilby av funksjoner. Det er 
     6. Legg til et felt ´navn´ i testeventen. Endre lambdafunksjonen slik at responsen inneholder navnet.
     7. Legg til en miljøvariabel og ta den i bruk i lambdafunksjonen.
 
-4. Oppgave der du utvikler lokalt.
-    1. Oppsett av AWS Cli
-    2. Få hello world til å kjøre ?
-    3. Lokal debugging med AWS Serverless Application Model
-        1. Installer Docker
-        2. SAM local requires that the project directory (or any parent directory) is listed in Docker file sharing options.
-        3. npm install -g aws-sam-local
-        4. sam local generate-event api > event.json
-        5. sam local invoke "ExampleFunction" -e event.json
+# Del 2 - Utvikle lokal
+I august 2017 lanserte AWS en betaversjon av et kommandolinjeverktøy kalt "AWS SAM Local" som gjør det mulig å utvikle og feilsøke tjenerløse applikasjoner lokalt. I denne oppgaven skal vi bruke dette verktøyet til å finne og fikse en feil i en lambdafunksjon.
+
+Serverless Application Model (SAM) er en utvidelse av Cloudformation (AWS sitt svar på Terraform) som forenkler oppsettet av tjenerløse applikasjoner. Filen template.yaml definerer en lambdafunksjon som trigges av kall mot et API. AWS SAM Local kan lese denne filen og opprette de ressursene som er definert der. Mer om det senere.
+
+Lambdafunksjoner kan trigges av ulike hendelser, f.eks. HTTP-kall eller opplasting av filer til en S3-bøtte. SAM Local kan lage slike hendelser for oss. Kjør "sam local generate-event api > event.json". Filen event.json inneholder nå et eksempel på et HTTP-kall. Denne hendelsen kan vi bruke til å trigge lambdafunksjonen. Kjør "sam local invoke "ExampleFunction" -e event.json".
+
         6. sam local start-api
         7. Gå til adressen som blir printet ut i konsoll-loggen
         8. Sjekk at "OK" printes
@@ -60,7 +61,7 @@ Vi benytter oss av det råeste og nyeste AWS har å tilby av funksjoner. Det er 
 
 5. Oppgave der du kjører mye data og/eller beregninger med Lambda. 
 
-Test your S3 lambda by running "sam local invoke 'S3Function' -e s3-event.json --template s3-template.yaml"
+Test your S3 lambda by running "sam local invoke 'S3Function' -e s3-event.json --template s3-template.yaml"∏
 
 
 
