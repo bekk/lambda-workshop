@@ -23,9 +23,9 @@ I august 2017 lanserte AWS en betaversjon av et kommandolinjeverktøy kalt "AWS 
 
 Serverless Application Model (SAM) er en utvidelse av Cloudformation (AWS sitt svar på Terraform) som forenkler oppsettet av tjenerløse applikasjoner. Filen template.yaml definerer en lambdafunksjon som trigges av kall mot et API. AWS SAM Local kan lese denne filen og opprette de ressursene som er definert der. Mer om det senere.
 
-Lambdafunksjoner kan trigges av ulike hendelser, f.eks. HTTP-kall eller opplasting av filer til en S3-bøtte. SAM Local kan lage slike hendelser for oss. Kjør `sam local generate-event api > event.json`. Filen event.json inneholder nå et eksempel på et HTTP-kall. Denne hendelsen kan vi bruke til å trigge lambdafunksjonen. Kjør `sam local invoke 'ExampleFunction' -e event.json`. Alternativt kan man sende inn hendelsen via stdout slik: `sam local generate-event api | sam local invoke 'ExampleFunction'`. Sjekk at `{"statusCode":200,"body":"OK"}` blir skrevet ut i terminalen.
+Lambdafunksjoner kan trigges av ulike hendelser, f.eks. HTTP-kall eller opplasting av filer til en S3-bøtte. SAM Local kan lage slike hendelser for oss. Kjør `sam local generate-event api > event.json`. Filen event.json inneholder nå et eksempel på et HTTP-kall. Denne hendelsen kan vi bruke til å trigge lambdafunksjonen. Kjør `sam local invoke 'ExampleFunction' -e event.json`. Alternativt kan man sende inn hendelsen via stdout slik: `sam local generate-event api | sam local invoke 'ExampleFunction'`. Sjekk at et objekt som inneholder `"body": Incomplete` blir skrevet ut i terminalen.
 
-API Gateway kan også kjøres lokalt. Kjør `sam local start-api` og bruk nettleseren, curl e.l. til å sende et HTTP-kall til adressen som blir skrevet ut i terminalen. Sjekk at responsen er 200 OK. Endre meldingen som returneres i body og lagre filen. Den nye meldigen skal nå returneres ved neste HTTP-kall. Logging fungerer også lokalt. Legg til en console.log() og sjekk at meldingen blir logget i terminalen.
+API Gateway kan også kjøres lokalt. Kjør `sam local start-api` og bruk nettleseren, curl e.l. til å sende et HTTP-kall til adressen som blir skrevet ut i terminalen. Sjekk at responsen er den samme som i sted. SAM Local hot-reloader endringer som blir gjort i lambdaen slik at man slipper å restarte API Gateway. Sjekk at dette fungerer ved å endre meldingen som logges og lagre filen. Den nye meldingen skal nå logges i terminalen ved neste HTTP-kall.
 
 Nå skal vi teste ut lokal debugging. Legg til følgende konfigurasjon for debugging i Visual Studio Code:
 ```json
@@ -35,13 +35,13 @@ Nå skal vi teste ut lokal debugging. Legg til følgende konfigurasjon for debug
 "request": "attach",
 "address": "localhost",
 "port": 5858,
-"localRoot": "${workspaceRoot}",
+"localRoot": "${workspaceRoot}/del2",
 "remoteRoot": "/var/task"
 }
 ```
-Kjør `sam local start-api -d 5858`. Gjør deretter et kall til API-endepunktet. Legg til et breakpoint inne i funksjonen din og start debugging i Visual Studio Code. Rekkefølgen her er viktig. Sjekk at eksekveringen av koden stopper ved breakpointet og at du kan inspisere variabler o.l. 
+Kjør `sam local start-api -d 5858`. Gjør deretter et kall til API-endepunktet. Legg til et breakpoint inne i funksjonen din og start debugging i Visual Studio Code. Rekkefølgen her er viktig. Fiks "feilen" i funksjonen slik at den returnerer statuskode 200 og kan deployes.
 
-For å deploye til AWS må man ha en S3-bøtte som man kan laste opp lambda-funksjonen til. Denne bøtta må ligge i samme region som lambdafunksjonen skal kjøre i. Opprett en ny bøtte om nødvendig. Følgende kommando laster opp lambda-funksjonen til S3 og lager en template-fil som peker på hvor lambda-filen ligger. 
+For å deploye til AWS må man ha en S3-bøtte som man kan laste opp lambdafunksjonen til. Denne bøtta må ligge i samme region som lambdafunksjonen skal kjøre i. Opprett en ny bøtte om nødvendig. Følgende kommando laster opp lambdafunksjonen til S3 og lager en template-fil som peker på hvor lambda-filen ligger. 
         
 ```sam package --template-file template.yaml --s3-bucket <name-of-s3-bucket> --output-template-file packaged.yaml```
             
@@ -49,11 +49,10 @@ For å deploye lambda-funksjonen og API Gateway kjører man følgende kommando.
         
 ```sam deploy --template-file packaged.yaml --stack-name <name-of-your-new-stack> --capabilities CAPABILITY_IAM```
 
-Gå til AWS-konsollet og sjekk at lambdafunksjonen og API Gateway har blitt deployet. Test at lambdafunksjonen kjører ved å gjøre et HTTP-kall mot API Gateway. URL-en til API-et finner under "Stage".
+Gå til AWS-konsollet og sjekk at lambdafunksjonen og API Gateway har blitt deployet. Test at lambdafunksjonen fungerer ved å gjøre et HTTP-kall mot API Gateway. URL-en til API-et finner du under "Stages - Prod". Dersom man bruker samme klient som ved lokal kjøring skal funksjonen returnere 200 OK.
 
-5. Oppgave der du kjører mye data og/eller beregninger med Lambda. 
-
-Test your S3 lambda by running "sam local invoke 'S3Function' -e s3-event.json --template s3-template.yaml"∏
+# Del 3
+Test your S3 lambda by running "sam local invoke 'S3Function' -e s3-event.json --template s3-template.yaml"
 
 
 
