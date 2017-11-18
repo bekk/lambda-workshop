@@ -1,0 +1,503 @@
+{
+    "trips": [
+      {
+        "start_station_id": 365,
+        "start_time": "2017-10-01 09:48:41 +0200",
+        "end_station_id": 205,
+        "end_time": "2017-10-01 10:13:14 +0200"
+      },
+      {
+        "start_station_id": 285,
+        "start_time": "2017-10-01 09:48:51 +0200",
+        "end_station_id": 278,
+        "end_time": "2017-10-01 09:55:51 +0200"
+      },
+      {
+        "start_station_id": 342,
+        "start_time": "2017-10-01 09:49:11 +0200",
+        "end_station_id": 287,
+        "end_time": "2017-10-01 10:02:58 +0200"
+      },
+      {
+        "start_station_id": 201,
+        "start_time": "2017-10-01 09:49:18 +0200",
+        "end_station_id": 161,
+        "end_time": "2017-10-01 10:05:50 +0200"
+      },
+      {
+        "start_station_id": 170,
+        "start_time": "2017-10-01 09:49:27 +0200",
+        "end_station_id": 344,
+        "end_time": "2017-10-01 09:52:41 +0200"
+      },
+      {
+        "start_station_id": 193,
+        "start_time": "2017-10-01 09:49:29 +0200",
+        "end_station_id": 196,
+        "end_time": "2017-10-01 10:02:30 +0200"
+      },
+      {
+        "start_station_id": 296,
+        "start_time": "2017-10-01 09:49:32 +0200",
+        "end_station_id": 208,
+        "end_time": "2017-10-01 09:56:46 +0200"
+      },
+      {
+        "start_station_id": 202,
+        "start_time": "2017-10-01 09:50:38 +0200",
+        "end_station_id": 253,
+        "end_time": "2017-10-01 09:53:07 +0200"
+      },
+      {
+        "start_station_id": 301,
+        "start_time": "2017-10-01 09:50:39 +0200",
+        "end_station_id": 233,
+        "end_time": "2017-10-01 09:58:36 +0200"
+      },
+      {
+        "start_station_id": 218,
+        "start_time": "2017-10-01 09:50:53 +0200",
+        "end_station_id": 264,
+        "end_time": "2017-10-01 10:06:42 +0200"
+      },
+      {
+        "start_station_id": 231,
+        "start_time": "2017-10-01 09:51:19 +0200",
+        "end_station_id": 191,
+        "end_time": "2017-10-01 10:08:22 +0200"
+      },
+      {
+        "start_station_id": 226,
+        "start_time": "2017-10-01 09:51:22 +0200",
+        "end_station_id": 208,
+        "end_time": "2017-10-01 09:55:35 +0200"
+      },
+      {
+        "start_station_id": 211,
+        "start_time": "2017-10-01 09:51:23 +0200",
+        "end_station_id": 249,
+        "end_time": "2017-10-01 09:56:02 +0200"
+      },
+      {
+        "start_station_id": 245,
+        "start_time": "2017-10-01 09:51:26 +0200",
+        "end_station_id": 160,
+        "end_time": "2017-10-01 09:59:58 +0200"
+      },
+      {
+        "start_station_id": 226,
+        "start_time": "2017-10-01 09:51:42 +0200",
+        "end_station_id": 211,
+        "end_time": "2017-10-01 09:58:28 +0200"
+      },
+      {
+        "start_station_id": 200,
+        "start_time": "2017-10-01 09:51:52 +0200",
+        "end_station_id": 279,
+        "end_time": "2017-10-01 10:01:28 +0200"
+      },
+      {
+        "start_station_id": 342,
+        "start_time": "2017-10-01 09:52:25 +0200",
+        "end_station_id": 371,
+        "end_time": "2017-10-01 10:00:09 +0200"
+      },
+      {
+        "start_station_id": 175,
+        "start_time": "2017-10-01 09:52:33 +0200",
+        "end_station_id": 165,
+        "end_time": "2017-10-01 10:15:02 +0200"
+      },
+      {
+        "start_station_id": 366,
+        "start_time": "2017-10-01 09:52:34 +0200",
+        "end_station_id": 193,
+        "end_time": "2017-10-01 09:57:12 +0200"
+      },
+      {
+        "start_station_id": 246,
+        "start_time": "2017-10-01 09:52:55 +0200",
+        "end_station_id": 160,
+        "end_time": "2017-10-01 09:59:30 +0200"
+      },
+      {
+        "start_station_id": 366,
+        "start_time": "2017-10-01 09:52:58 +0200",
+        "end_station_id": 193,
+        "end_time": "2017-10-01 09:57:10 +0200"
+      },
+      {
+        "start_station_id": 168,
+        "start_time": "2017-10-01 09:53:52 +0200",
+        "end_station_id": 277,
+        "end_time": "2017-10-01 09:58:08 +0200"
+      },
+      {
+        "start_station_id": 278,
+        "start_time": "2017-10-01 09:54:39 +0200",
+        "end_station_id": 294,
+        "end_time": "2017-10-01 10:08:14 +0200"
+      },
+      {
+        "start_station_id": 278,
+        "start_time": "2017-10-01 09:54:53 +0200",
+        "end_station_id": 290,
+        "end_time": "2017-10-01 10:04:26 +0200"
+      },
+      {
+        "start_station_id": 199,
+        "start_time": "2017-10-01 09:54:58 +0200",
+        "end_station_id": 165,
+        "end_time": "2017-10-01 10:10:58 +0200"
+      },
+      {
+        "start_station_id": 212,
+        "start_time": "2017-10-01 09:54:59 +0200",
+        "end_station_id": 212,
+        "end_time": "2017-10-01 10:11:14 +0200"
+      },
+      {
+        "start_station_id": 235,
+        "start_time": "2017-10-01 09:55:28 +0200",
+        "end_station_id": 297,
+        "end_time": "2017-10-01 10:10:33 +0200"
+      },
+      {
+        "start_station_id": 208,
+        "start_time": "2017-10-01 09:55:30 +0200",
+        "end_station_id": 211,
+        "end_time": "2017-10-01 09:58:32 +0200"
+      },
+      {
+        "start_station_id": 392,
+        "start_time": "2017-10-01 09:55:33 +0200",
+        "end_station_id": 278,
+        "end_time": "2017-10-01 10:04:31 +0200"
+      },
+      {
+        "start_station_id": 277,
+        "start_time": "2017-10-01 09:56:21 +0200",
+        "end_station_id": 238,
+        "end_time": "2017-10-01 10:02:47 +0200"
+      },
+      {
+        "start_station_id": 207,
+        "start_time": "2017-10-01 09:56:25 +0200",
+        "end_station_id": 163,
+        "end_time": "2017-10-01 10:00:21 +0200"
+      },
+      {
+        "start_station_id": 229,
+        "start_time": "2017-10-01 09:56:28 +0200",
+        "end_station_id": 253,
+        "end_time": "2017-10-01 10:06:35 +0200"
+      },
+      {
+        "start_station_id": 206,
+        "start_time": "2017-10-01 09:56:33 +0200",
+        "end_station_id": 228,
+        "end_time": "2017-10-01 10:00:47 +0200"
+      },
+      {
+        "start_station_id": 204,
+        "start_time": "2017-10-01 09:56:57 +0200",
+        "end_station_id": 165,
+        "end_time": "2017-10-01 10:36:14 +0200"
+      },
+      {
+        "start_station_id": 357,
+        "start_time": "2017-10-01 09:57:30 +0200",
+        "end_station_id": 277,
+        "end_time": "2017-10-01 09:58:54 +0200"
+      },
+      {
+        "start_station_id": 202,
+        "start_time": "2017-10-01 09:57:33 +0200",
+        "end_station_id": 202,
+        "end_time": "2017-10-01 10:06:12 +0200"
+      },
+      {
+        "start_station_id": 170,
+        "start_time": "2017-10-01 09:58:31 +0200",
+        "end_station_id": 175,
+        "end_time": "2017-10-01 10:20:43 +0200"
+      },
+      {
+        "start_station_id": 292,
+        "start_time": "2017-10-01 09:58:59 +0200",
+        "end_station_id": 290,
+        "end_time": "2017-10-01 10:04:56 +0200"
+      },
+      {
+        "start_station_id": 295,
+        "start_time": "2017-10-01 09:59:14 +0200",
+        "end_station_id": 225,
+        "end_time": "2017-10-01 10:11:31 +0200"
+      },
+      {
+        "start_station_id": 191,
+        "start_time": "2017-10-01 09:59:37 +0200",
+        "end_station_id": 295,
+        "end_time": "2017-10-01 10:01:53 +0200"
+      },
+      {
+        "start_station_id": 260,
+        "start_time": "2017-10-01 09:59:37 +0200",
+        "end_station_id": 218,
+        "end_time": "2017-10-01 10:07:35 +0200"
+      },
+      {
+        "start_station_id": 287,
+        "start_time": "2017-10-01 09:59:50 +0200",
+        "end_station_id": 204,
+        "end_time": "2017-10-01 10:04:45 +0200"
+      },
+      {
+        "start_station_id": 267,
+        "start_time": "2017-10-01 10:00:19 +0200",
+        "end_station_id": 161,
+        "end_time": "2017-10-01 10:03:54 +0200"
+      },
+      {
+        "start_station_id": 218,
+        "start_time": "2017-10-01 10:00:20 +0200",
+        "end_station_id": 218,
+        "end_time": "2017-10-01 10:00:45 +0200"
+      },
+      {
+        "start_station_id": 218,
+        "start_time": "2017-10-01 10:00:59 +0200",
+        "end_station_id": 218,
+        "end_time": "2017-10-01 10:01:24 +0200"
+      },
+      {
+        "start_station_id": 342,
+        "start_time": "2017-10-01 10:01:05 +0200",
+        "end_station_id": 249,
+        "end_time": "2017-10-01 10:14:36 +0200"
+      },
+      {
+        "start_station_id": 344,
+        "start_time": "2017-10-01 10:01:40 +0200",
+        "end_station_id": 292,
+        "end_time": "2017-10-01 10:12:02 +0200"
+      },
+      {
+        "start_station_id": 160,
+        "start_time": "2017-10-01 10:01:46 +0200",
+        "end_station_id": 238,
+        "end_time": "2017-10-01 10:09:45 +0200"
+      },
+      {
+        "start_station_id": 249,
+        "start_time": "2017-10-01 10:01:55 +0200",
+        "end_station_id": 194,
+        "end_time": "2017-10-01 10:09:33 +0200"
+      },
+      {
+        "start_station_id": 278,
+        "start_time": "2017-10-01 10:02:07 +0200",
+        "end_station_id": 204,
+        "end_time": "2017-10-01 10:10:04 +0200"
+      },
+      {
+        "start_station_id": 222,
+        "start_time": "2017-10-01 10:02:08 +0200",
+        "end_station_id": 201,
+        "end_time": "2017-10-01 10:08:54 +0200"
+      },
+      {
+        "start_station_id": 191,
+        "start_time": "2017-10-01 10:02:36 +0200",
+        "end_station_id": 385,
+        "end_time": "2017-10-01 10:08:40 +0200"
+      },
+      {
+        "start_station_id": 160,
+        "start_time": "2017-10-01 10:02:44 +0200",
+        "end_station_id": 238,
+        "end_time": "2017-10-01 10:09:51 +0200"
+      },
+      {
+        "start_station_id": 274,
+        "start_time": "2017-10-01 10:02:56 +0200",
+        "end_station_id": 160,
+        "end_time": "2017-10-01 10:06:38 +0200"
+      },
+      {
+        "start_station_id": 191,
+        "start_time": "2017-10-01 10:03:18 +0200",
+        "end_station_id": 385,
+        "end_time": "2017-10-01 10:08:37 +0200"
+      },
+      {
+        "start_station_id": 295,
+        "start_time": "2017-10-01 10:04:50 +0200",
+        "end_station_id": 297,
+        "end_time": "2017-10-01 10:10:24 +0200"
+      },
+      {
+        "start_station_id": 210,
+        "start_time": "2017-10-01 10:04:50 +0200",
+        "end_station_id": 267,
+        "end_time": "2017-10-01 10:17:26 +0200"
+      },
+      {
+        "start_station_id": 293,
+        "start_time": "2017-10-01 10:05:05 +0200",
+        "end_station_id": 390,
+        "end_time": "2017-10-01 10:09:19 +0200"
+      },
+      {
+        "start_station_id": 242,
+        "start_time": "2017-10-01 10:05:21 +0200",
+        "end_station_id": 194,
+        "end_time": "2017-10-01 10:10:21 +0200"
+      },
+      {
+        "start_station_id": 204,
+        "start_time": "2017-10-01 10:05:49 +0200",
+        "end_station_id": 205,
+        "end_time": "2017-10-01 10:39:46 +0200"
+      },
+      {
+        "start_station_id": 264,
+        "start_time": "2017-10-01 10:06:14 +0200",
+        "end_station_id": 264,
+        "end_time": "2017-10-01 11:25:19 +0200"
+      },
+      {
+        "start_station_id": 285,
+        "start_time": "2017-10-01 10:06:18 +0200",
+        "end_station_id": 201,
+        "end_time": "2017-10-01 10:09:13 +0200"
+      },
+      {
+        "start_station_id": 204,
+        "start_time": "2017-10-01 10:06:46 +0200",
+        "end_station_id": 205,
+        "end_time": "2017-10-01 10:39:32 +0200"
+      },
+      {
+        "start_station_id": 264,
+        "start_time": "2017-10-01 10:06:50 +0200",
+        "end_station_id": 253,
+        "end_time": "2017-10-01 10:23:54 +0200"
+      },
+      {
+        "start_station_id": 194,
+        "start_time": "2017-10-01 10:06:53 +0200",
+        "end_station_id": 201,
+        "end_time": "2017-10-01 10:10:53 +0200"
+      },
+      {
+        "start_station_id": 161,
+        "start_time": "2017-10-01 10:07:43 +0200",
+        "end_station_id": 213,
+        "end_time": "2017-10-01 10:18:59 +0200"
+      },
+      {
+        "start_station_id": 306,
+        "start_time": "2017-10-01 10:07:44 +0200",
+        "end_station_id": 295,
+        "end_time": "2017-10-01 10:12:18 +0200"
+      },
+      {
+        "start_station_id": 296,
+        "start_time": "2017-10-01 10:07:47 +0200",
+        "end_station_id": 254,
+        "end_time": "2017-10-01 10:21:11 +0200"
+      },
+      {
+        "start_station_id": 209,
+        "start_time": "2017-10-01 10:08:08 +0200",
+        "end_station_id": 284,
+        "end_time": "2017-10-01 10:15:27 +0200"
+      },
+      {
+        "start_station_id": 287,
+        "start_time": "2017-10-01 10:09:00 +0200",
+        "end_station_id": 199,
+        "end_time": "2017-10-01 10:12:27 +0200"
+      },
+      {
+        "start_station_id": 195,
+        "start_time": "2017-10-01 10:09:35 +0200",
+        "end_station_id": 309,
+        "end_time": "2017-10-01 11:59:57 +0200"
+      },
+      {
+        "start_station_id": 242,
+        "start_time": "2017-10-01 10:10:15 +0200",
+        "end_station_id": 188,
+        "end_time": "2017-10-01 10:17:05 +0200"
+      },
+      {
+        "start_station_id": 350,
+        "start_time": "2017-10-01 10:10:19 +0200",
+        "end_station_id": 170,
+        "end_time": "2017-10-01 10:14:27 +0200"
+      },
+      {
+        "start_station_id": 229,
+        "start_time": "2017-10-01 10:10:25 +0200",
+        "end_station_id": 234,
+        "end_time": "2017-10-01 10:20:48 +0200"
+      },
+      {
+        "start_station_id": 197,
+        "start_time": "2017-10-01 10:10:37 +0200",
+        "end_station_id": 254,
+        "end_time": "2017-10-01 10:22:31 +0200"
+      },
+      {
+        "start_station_id": 201,
+        "start_time": "2017-10-01 10:10:44 +0200",
+        "end_station_id": 195,
+        "end_time": "2017-10-01 10:20:06 +0200"
+      },
+      {
+        "start_station_id": 201,
+        "start_time": "2017-10-01 10:11:15 +0200",
+        "end_station_id": 195,
+        "end_time": "2017-10-01 10:20:04 +0200"
+      },
+      {
+        "start_station_id": 251,
+        "start_time": "2017-10-01 10:11:23 +0200",
+        "end_station_id": 169,
+        "end_time": "2017-10-01 12:02:37 +0200"
+      },
+      {
+        "start_station_id": 261,
+        "start_time": "2017-10-01 10:11:38 +0200",
+        "end_station_id": 392,
+        "end_time": "2017-10-01 10:14:20 +0200"
+      },
+      {
+        "start_station_id": 194,
+        "start_time": "2017-10-01 10:12:24 +0200",
+        "end_station_id": 201,
+        "end_time": "2017-10-01 10:16:10 +0200"
+      },
+      {
+        "start_station_id": 222,
+        "start_time": "2017-10-01 10:12:47 +0200",
+        "end_station_id": 371,
+        "end_time": "2017-10-01 10:27:04 +0200"
+      },
+      {
+        "start_station_id": 161,
+        "start_time": "2017-10-01 10:13:19 +0200",
+        "end_station_id": 221,
+        "end_time": "2017-10-01 11:25:39 +0200"
+      },
+      {
+        "start_station_id": 264,
+        "start_time": "2017-10-01 10:13:33 +0200",
+        "end_station_id": 254,
+        "end_time": "2017-10-01 10:35:50 +0200"
+      }
+    ]
+}
+      
