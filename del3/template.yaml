@@ -17,6 +17,9 @@ Resources:
       # TODO: Adjust the following properties based on your local invocations. They are probably way too high.
       Timeout: 300
       MemorySize: 1024
+      Environment:
+        Variables:
+          SLACK_WEBHOOK: REPLACE_ME # TODO: replace this
 
   Bucket:
     Type: AWS::S3::Bucket
