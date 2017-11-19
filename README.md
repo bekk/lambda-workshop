@@ -1,4 +1,5 @@
 # Introduksjon
+Serverless, eller Functions as a Service (FaaS), lar oss kjøre kode i containere håndtert av en tredjepart. Koden trigges av eventer. Den mest kjente implementasjonen er AWS Lambda. I denne workshoppen utforsker vi mulighetene AWS lambda gir oss og ser på hvordan vi får til effektiv utvikling ved blant annet å kjøre funksjonene lokalt.
 
 # Forberedelser
 Vi benytter oss av det råeste og nyeste AWS har å tilby av funksjoner. Det er derfor nødvendig å installere nyeste versjon av: 
