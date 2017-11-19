@@ -44,7 +44,7 @@ I Lambda Management Console har man mulighet til å spesifisere miljøvariabler 
 7. Endre verdien på miljøvariabelen til f.eks `prod`og sjekk at loggen ikke inneholder logginnslaget.
 
 
-# Del 2 - Utvikle lokalt
+# Oppgave 2 - Utvikle lokalt
 I august 2017 lanserte AWS en betaversjon av et kommandolinjeverktøy kalt "AWS SAM Local" som gjør det mulig å utvikle og feilsøke tjenerløse applikasjoner lokalt. I denne oppgaven skal vi bruke dette verktøyet til å finne og fikse en feil i en lambdafunksjon.
 
 Serverless Application Model (SAM) er en utvidelse av Cloudformation (AWS sitt svar på Terraform) som forenkler oppsettet av tjenerløse applikasjoner. Filen template.yaml definerer en lambdafunksjon som trigges av kall mot et API. AWS SAM Local kan lese denne filen og opprette de ressursene som er definert der. Mer om det senere.
@@ -77,7 +77,7 @@ For å deploye lambda-funksjonen og API Gateway kjører man følgende kommando.
 
 Gå til AWS-konsollet og sjekk at lambdafunksjonen og API Gateway har blitt deployet. Test at lambdafunksjonen fungerer ved å gjøre et HTTP-kall mot API Gateway. URL-en til API-et finner du under "Stages - Prod". Dersom man bruker samme klient som ved lokal kjøring skal funksjonen returnere 200 OK.
 
-# Del 3
+# Oppgave 3
 Kunden du er innleid hos har inngått en avtale med Oslo Bysykkel om å få levert en dump av bysykkeldata hver måned. Til å begynne med er de interessert i en POC som månedlig rapporterer om den mest brukte sykkelruten fra Vippetangen. De har ikke lagt noen spesielle føringer for valg av teknologi, men er opptatt av at driftskostnadene blir så lave som mulig og at rapporten genereres så snart dataen er tilgjengelig. Oslo bysykkel er fleksible mtp. hvor de skal sende datadumpen, men kan kun garantere at den kommer en eller annen gang i løpet av den første uka hver måned. Du tenker umiddelbart at dette kan løses ved at man trigger en lambda ved opplasting til en S3-bøtte og setter i gang med å kode.
 
 Tips:
@@ -85,9 +85,9 @@ Tips:
 * Test funksjonen din lokalt ved å lese testdata.json fra en S3-bøtte.
 * ID-en til de to sykkelstativene på Vippetangen er 249 og 278.
 
-## Post til slack!
-Det er et krav fra kunden at outputen fra lambdaen skal postes som en melding til slack. Heldigvis for deg har et tidligere konsulenthus glemt igjen filen 'slack.js' i repositoriet vårt. Denne tilbyr en funksjon som gjør nettopp dette. Importer denne filen inn i s3-lambda.js.
+# Oppgave 4 Post til slack!
+Kunden vil gjerne at straks rådataen er tilgjengelig, så skal beregningen fra forrige oppgave straks postes til slack. Heldigvis for deg har et tidligere konsulenthus glemt igjen filen 'slack.js' i repositoriet vårt. Denne tilbyr en funksjon som gjør nettopp dette. Utvid løsningen fra forrige oppgave med dette.
 
-NB! Husk å:
+TIps
 * Sett ditt eget valgfrie username i config.js.
 * Spesifiser slack sin webhook-url i environments. Denne har vi postet på slack :)
