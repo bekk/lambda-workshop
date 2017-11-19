@@ -1,3 +1,3 @@
 exports.slack = {
-    username: 'Joakim'
+    username: 'your_username'
 };
