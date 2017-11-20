@@ -1,7 +1,7 @@
 {
     "trips": [
       {
-        "start_station_id": 365,
+        "start_station_id": 249,
         "start_time": "2017-10-01 09:48:41 +0200",
         "end_station_id": 205,
         "end_time": "2017-10-01 10:13:14 +0200"
@@ -19,7 +19,7 @@
         "end_time": "2017-10-01 10:02:58 +0200"
       },
       {
-        "start_station_id": 201,
+        "start_station_id": 249,
         "start_time": "2017-10-01 09:49:18 +0200",
         "end_station_id": 161,
         "end_time": "2017-10-01 10:05:50 +0200"
@@ -79,9 +79,9 @@
         "end_time": "2017-10-01 09:56:02 +0200"
       },
       {
-        "start_station_id": 245,
+        "start_station_id": 278,
         "start_time": "2017-10-01 09:51:26 +0200",
-        "end_station_id": 160,
+        "end_station_id": 161,
         "end_time": "2017-10-01 09:59:58 +0200"
       },
       {
@@ -97,9 +97,9 @@
         "end_time": "2017-10-01 10:01:28 +0200"
       },
       {
-        "start_station_id": 342,
+        "start_station_id": 249,
         "start_time": "2017-10-01 09:52:25 +0200",
-        "end_station_id": 371,
+        "end_station_id": 161,
         "end_time": "2017-10-01 10:00:09 +0200"
       },
       {
@@ -175,7 +175,7 @@
         "end_time": "2017-10-01 10:04:31 +0200"
       },
       {
-        "start_station_id": 277,
+        "start_station_id": 249,
         "start_time": "2017-10-01 09:56:21 +0200",
         "end_station_id": 238,
         "end_time": "2017-10-01 10:02:47 +0200"
@@ -301,7 +301,7 @@
         "end_time": "2017-10-01 10:10:04 +0200"
       },
       {
-        "start_station_id": 222,
+        "start_station_id": 278,
         "start_time": "2017-10-01 10:02:08 +0200",
         "end_station_id": 201,
         "end_time": "2017-10-01 10:08:54 +0200"
@@ -349,15 +349,15 @@
         "end_time": "2017-10-01 10:09:19 +0200"
       },
       {
-        "start_station_id": 242,
+        "start_station_id": 249,
         "start_time": "2017-10-01 10:05:21 +0200",
         "end_station_id": 194,
         "end_time": "2017-10-01 10:10:21 +0200"
       },
       {
-        "start_station_id": 204,
+        "start_station_id": 278,
         "start_time": "2017-10-01 10:05:49 +0200",
-        "end_station_id": 205,
+        "end_station_id": 194,
         "end_time": "2017-10-01 10:39:46 +0200"
       },
       {
