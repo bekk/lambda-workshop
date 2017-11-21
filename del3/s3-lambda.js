@@ -17,9 +17,9 @@ exports.handler = (event, context, callback) => {
     console.log(`Getting object ${key} from bucket ${bucket}`);
 
     s3.getObject(params, (err, data) => {
-        if (error) {
+        if (err) {
             console.log(err);
-            callback(error);
+            callback(err);
         } else {
             const body = JSON.parse(data.Body.toString());
 
