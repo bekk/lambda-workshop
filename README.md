@@ -28,7 +28,7 @@ Lambdafunksjonen er nå opprettet og du kan kjøre den, endre koden og konfigura
 
 Feltene som angis i eventen kan brukes i Lambdafunksjonen.
 
-4. Legg til et felt ´navn´ i testeventen. Endre på lambdafunksjonen slik at responsen inneholder navnet fra eventen.
+4. Legg til et felt `navn` i testeventen. Endre på lambdafunksjonen slik at responsen inneholder navnet fra eventen.
 
 ### Logging
 CloudWatch brukes for å håndtere logging, og du finner oversikt over logginnslagene under `Log Output`.
