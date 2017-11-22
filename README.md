@@ -21,8 +21,7 @@ Lambda lar deg kjøre kode uten at du må forholde deg til servere. Du laster op
 Oppretting av ny rolle gjøres ved å velge `create a custom role` og opprette rollen `lambda_basic_execution`. [Mer informasjon om rollene finner du her](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#lambda-intro-execution-role). Det kan ta noen minutter før rollen blir tilgjengelig.
 
 ## Teste lambda-funksjonen
-Lambdafunksjonen er nå opprettet og du kan kjøre den, endre koden og konfigurasjonen. Gjør deg kjent med hvilke konfigurasjonsendringer du har mulighet til å gjøre.
-
+Lambdafunksjonen er nå opprettet og du kan kjøre den, endre koden og konfigurasjonen. 
 
 ### Test events
 3. Klikk på "Test"-knappen for å teste funksjonen. Opprett testevent og test lambda-funksjonen. Legg merke til hvilken informasjon som gis etter kjøringen. 
