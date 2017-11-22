@@ -3,6 +3,7 @@ Serverless, eller Functions as a Service (FaaS), lar oss kjøre kode i container
 
 # Forberedelser
 Vi benytter oss av det råeste og nyeste AWS har å tilby av funksjoner. Det er derfor nødvendig å installere nyeste versjon av: 
+* Hvis du ikke har allerede, lag en [AWS-konto](https://aws.amazon.com/).
 * [aws-cli](https://aws.amazon.com/cli/?sc_channel=PS&sc_campaign=acquisition_ND&sc_publisher=google&sc_medium=command_line_b&sc_content=aws_cli_e&sc_detail=aws%20cli&sc_category=command_line&sc_segment=161194456247&sc_matchtype=e&sc_country=ND&s_kwcid=AL!4422!3!161194456247!e!!g!!aws%20cli&ef_id=V671xQAAACZf9KTq:20171119153001:s) (min 1.11). For å kjøre kommandoer opp mot AWS-kontoen din.
 * [docker](https://www.docker.com/) (nyeste versjon). For å kjøre lambda-funksjoner lokalt 💪
     * Sjekk at git-repoet er en undermappe av en av mappene som er i listen under fanen "File Sharing" i Docker sine innstillinger.
@@ -20,7 +21,8 @@ Lambda lar deg kjøre kode uten at du må forholde deg til servere. Du laster op
 Oppretting av ny rolle gjøres ved å velge `create a custom role` og opprette rollen `lambda_basic_execution`. [Mer informasjon om rollene finner du her](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#lambda-intro-execution-role). Det kan ta noen minutter før rollen blir tilgjengelig.
 
 ## Teste lambda-funksjonen
-Lambdafunksjonen er nå opprettet og du kan kjøre den, endre koden og konfigurasjonen. 
+Lambdafunksjonen er nå opprettet og du kan kjøre den, endre koden og konfigurasjonen. Gjør deg kjent med hvilke konfigurasjonsendringer du har mulighet til å gjøre.
+
 
 ### Test events
 3. Klikk på "Test"-knappen for å teste funksjonen. Opprett testevent og test lambda-funksjonen. Legg merke til hvilken informasjon som gis etter kjøringen. 
