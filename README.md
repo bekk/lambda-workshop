@@ -93,3 +93,4 @@ Kunden vil gjerne at straks rådataen er tilgjengelig, så skal beregningen fra 
 Tips:
 * Sett ditt eget valgfrie username i config.js.
 * Spesifiser slack sin webhook-url i environments. Denne har vi postet på slack :)
+* Slack-modulen har en avhengighet til npm-modulen request. Hvordan kan du få denne inn?
