@@ -57,7 +57,7 @@ Lambdafunksjoner kan trigges av ulike hendelser, f.eks. HTTP-kall eller opplasti
 
 API Gateway kan også kjøres lokalt. Kjør `sam local start-api` og bruk nettleseren, curl e.l. til å sende et HTTP-kall til adressen som blir skrevet ut i terminalen. Sjekk at responsen er den samme som i sted. SAM Local hot-reloader endringer som blir gjort i lambdaen slik at man slipper å restarte API Gateway. Sjekk at dette fungerer ved å endre meldingen som logges og lagre filen. Den nye meldingen skal nå logges i terminalen ved neste HTTP-kall.
 
-Nå skal vi teste ut lokal debugging. Legg til følgende konfigurasjon for debugging i Visual Studio Code (trykk "Debug" og "Open Configurations"):
+Nå skal vi teste ut lokal debugging. Legg til følgende konfigurasjon for debugging i Visual Studio Code (trykk "Debug" og "Open Configurations" i menyen):
 ```json
 {
 "name": "Attach to SAM Local",
