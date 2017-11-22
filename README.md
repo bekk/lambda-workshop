@@ -13,7 +13,7 @@ Vi benytter oss av det råeste og nyeste AWS har å tilby av funksjoner. Det er 
 Lambda lar deg kjøre kode uten at du må forholde deg til servere. Du laster opp koden din, og Lambda tar seg av eksekvering og skalering. For å bli kjent med Lambda og hvordan det brukes starter vi med å lage en enkel lambda-funksjon i AWS Management Console. 
 
 ## Opprette Lambda-funksjon
-1. Gå til Lambda i AWS Management Console. Velg `Create a function` og `Author from scratch`. Gi Lambda-funksjonen et navn.
+1. Gå til Lambda i [AWS Management Console](https://aws.amazon.com/). Velg `Create a function` og `Author from scratch`. Gi Lambda-funksjonen et navn.
 
 ### Rolle
 2. Ved oppretting av Lambda-funksjonen må du angi en rolle. Rollen definerer tilgangene til funksjonen din. Dersom du har en eksisterende rolle med nødvendige tilganger kan denne brukes. 
