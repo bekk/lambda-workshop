@@ -1,6 +1,9 @@
 # Introduksjon
 Serverless, eller Functions as a Service (FaaS), lar oss kjøre kode i containere håndtert av en tredjepart. Koden trigges av eventer. Den mest kjente implementasjonen er AWS Lambda. I denne workshoppen utforsker vi mulighetene AWS lambda gir oss og ser på hvordan vi får til effektiv utvikling ved blant annet å kjøre funksjonene lokalt.
 
+![alt text](http://www.rw-designer.com/icon-image/14439-256x256x32.png "Lambda")
+
+
 # Forberedelser
 Vi benytter oss av det råeste og nyeste AWS har å tilby av funksjoner. Det er derfor nødvendig å installere nyeste versjon av: 
 * Hvis du ikke har allerede, lag en [AWS-konto](https://aws.amazon.com/).
@@ -21,7 +24,8 @@ Lambda lar deg kjøre kode uten at du må forholde deg til servere. Du laster op
 Oppretting av ny rolle gjøres ved å velge `create a custom role` og opprette rollen `lambda_basic_execution`. [Mer informasjon om rollene finner du her](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#lambda-intro-execution-role). Det kan ta noen minutter før rollen blir tilgjengelig.
 
 ## Teste lambda-funksjonen
-Lambdafunksjonen er nå opprettet og du kan kjøre den, endre koden og konfigurasjonen. 
+Lambdafunksjonen er nå opprettet og du kan kjøre den, endre koden og konfigurasjonen. Gjør deg kjent med hvilke konfigurasjonsendringer du har mulighet til å gjøre.
+
 
 ### Test events
 3. Klikk på "Test"-knappen for å teste funksjonen. Opprett testevent og test lambda-funksjonen. Legg merke til hvilken informasjon som gis etter kjøringen. 
