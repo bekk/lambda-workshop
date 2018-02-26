@@ -1,49 +1,41 @@
 # Introduksjon
-Serverless, eller [Function as a Service (FaaS)](https://stackify.com/function-as-a-service-serverless-architecture/), lar oss kjøre kode i containere håndtert av en tredjepart. Koden trigges av eventer. Den mest kjente implementasjonen er AWS Lambda. I denne workshoppen utforsker vi mulighetene AWS lambda gir oss og ser på hvordan vi får til effektiv utvikling ved blant annet å kjøre funksjonene lokalt.
+Serverless, eller [Function as a Service (FaaS)](https://stackify.com/function-as-a-service-serverless-architecture/), lar oss kjøre kode i containere håndtert av en tredjepart. Det betyr at vi ikke trenger å forholde oss til maskinvare eller hvordan software som kjøres. Vi definerer bare funksjoner som trigges av eventer, for eksempel at en fil har blitt lastet opp eller et vanlig HTTP kall. Den  kanskje mest kjente implementasjonen av Serverless er AWS Lambda. I denne workshoppen utforsker vi mulighetene AWS lambda gir oss og ser på hvordan vi får til effektiv utvikling ved blant annet å kjøre funksjonene lokalt.
 
 ![alt text](http://www.rw-designer.com/icon-image/14439-256x256x32.png "Lambda")
 
 
 # Forberedelser
-Vi benytter oss av det råeste og nyeste AWS har å tilby av funksjoner. Det er derfor nødvendig å installere nyeste versjon av: 
-* Hvis du ikke har allerede, lag en [AWS-konto](https://aws.amazon.com/).
-* [aws-cli](https://aws.amazon.com/cli/?sc_channel=PS&sc_campaign=acquisition_ND&sc_publisher=google&sc_medium=command_line_b&sc_content=aws_cli_e&sc_detail=aws%20cli&sc_category=command_line&sc_segment=161194456247&sc_matchtype=e&sc_country=ND&s_kwcid=AL!4422!3!161194456247!e!!g!!aws%20cli&ef_id=V671xQAAACZf9KTq:20171119153001:s) (min 1.11). For å kjøre kommandoer opp mot AWS-kontoen din.
-* [docker](https://www.docker.com/) (nyeste versjon). For å kjøre lambda-funksjoner lokalt 💪
+Vi benytter oss av det råeste, nyeste AWS har å tilby av funksjonalitet. Internettkapasiteten på workshoppen er begrenset, det er derfor viktig at du på forhånd utfører følgende:
+
+1. Hvis du ikke har allerede, lag en [AWS-konto](https://aws.amazon.com/).
+2. Installer [aws-cli](https://aws.amazon.com/cli/?sc_channel=PS&sc_campaign=acquisition_ND&sc_publisher=google&sc_medium=command_line_b&sc_content=aws_cli_e&sc_detail=aws%20cli&sc_category=command_line&sc_segment=161194456247&sc_matchtype=e&sc_country=ND&s_kwcid=AL!4422!3!161194456247!e!!g!!aws%20cli&ef_id=V671xQAAACZf9KTq:20171119153001:s) (min 1.11). For å kjøre kommandoer opp mot AWS-kontoen din.
+3. Installer [docker](https://www.docker.com/) (nyeste versjon). For å kjøre lambda-funksjoner lokalt 💪
     * Sjekk at git-repoet er en undermappe av en av mappene som er i listen under fanen "File Sharing" i Docker sine innstillinger.
-* For å kjøre lambda-funksjoner trenger du å installere aws-sam local: ```npm install -g aws-sam-local ```. Verifiser at installasjonen var vellykket ved å kjøre ```sam --version```.
+4. For å kjøre lambda-funksjoner trenger du å installere aws-sam local: ```npm install -g aws-sam-local ```. Verifiser at installasjonen var vellykket ved å kjøre ```sam --version```.
 
 # Oppgave 1 - Hello World
-Lambda lar deg kjøre kode uten at du må forholde deg til servere. Du laster opp koden din, og Lambda tar seg av eksekvering og skalering. For å bli kjent med Lambda og hvordan det brukes starter vi med å lage en enkel lambda-funksjon i AWS Management Console. 
+For å bli kjent med Lambda og hvordan det brukes starter vi med å lage en enkel lambda-funksjon i AWS Management Console.
 
 ## Opprette Lambda-funksjon
 1. Gå til Lambda i [AWS Management Console](https://aws.amazon.com/). Velg `Create a function` og `Author from scratch`. Gi Lambda-funksjonen et navn.
-
-### Rolle
-2. Ved oppretting av Lambda-funksjonen må du angi en rolle. Rollen definerer tilgangene til funksjonen din. Dersom du har en eksisterende rolle med nødvendige tilganger kan denne brukes. 
-
-Oppretting av ny rolle gjøres ved å velge `create a custom role` og opprette rollen `lambda_basic_execution`. [Mer informasjon om rollene finner du her](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#lambda-intro-execution-role). Det kan ta noen minutter før rollen blir tilgjengelig.
+2. Bruk nyeste node.js som runtime.
+2. Ved oppretting av Lambda-funksjonen må du angi en rolle. Rollen definerer tilgangene til funksjonen din. Dersom du har en eksisterende rolle med nødvendige tilganger kan denne brukes. Oppretting av ny rolle gjøres ved å velge `create a custom role` og opprette rollen `lambda_basic_execution`. [Mer informasjon om rollene finner du her](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#lambda-intro-execution-role). Det kan ta noen minutter før rollen blir tilgjengelig.
 
 ## Teste lambda-funksjonen
-Lambdafunksjonen er nå opprettet og du kan kjøre den, endre koden og konfigurasjonen. Gjør deg kjent med hvilke konfigurasjonsendringer du har mulighet til å gjøre.
+Lambdafunksjonen er nå opprettet og du kan kjøre den, endre koden og konfigurasjonen. Du kan legge til en rekke triggers som bestemmer når funksjonen skal kjøre. I første omgang bruker vi testfunksjonaliteten til Lambda.
 
 
-### Test events
-3. Klikk på "Test"-knappen for å teste funksjonen. Opprett testevent og test lambda-funksjonen. Legg merke til hvilken informasjon som gis etter kjøringen. 
+1. Klikk på "Test"-knappen for å teste funksjonen. Opprett testevent og test lambda-funksjonen. Legg merke til hvilken informasjon som gis etter kjøringen.
+    * Feltene som angis i event-objektet er typisk knyttet til hvordan type trigger det er.
 
-Feltene som angis i eventen kan brukes i Lambdafunksjonen.
-
-4. Legg til et felt `navn` i testeventen. Endre på lambdafunksjonen slik at responsen inneholder navnet fra eventen.
-
-### Logging
-CloudWatch brukes for å håndtere logging, og du finner oversikt over logginnslagene under `Log Output`.
-
-5. Legg til logging i lambda-funksjonen din og test lambdafunksjonen på nytt. F.eks `console.log("Dev logging");`
+2. Legg til et feltene gold, silver and bronze i testeventen. Fyll inn [norges medaljestatiskk](https://www.vg.no/spesial/2018/ol/medaljer) fra OL.
+3. Endre på funksjonen slik at den printer ut det samlede antallet medaljer Norge fikk under OL.
 
 
 ### Miljøvariabler
 I Lambda Management Console har man mulighet til å spesifisere miljøvariabler (Environment Variables). Disse miljøvariablene er tilgjengelige fra lambda-funksjonen og gjør det mulig å endre konfigurasjonsinnstillinger uten å måtte gjøre kodeendringer.
 
-6. Opprett en miljøvariabel `environment` og gi den verdien `dev`. Endre lambdafunksjonen slik at logging kun skjer dersom environment er `dev`. 
+6. Opprett en miljøvariabel `environment` og gi den verdien `development`. Endre lambdafunksjonen slik at logging kun skjer dersom environment er `development`.
 
 7. Endre verdien på miljøvariabelen til f.eks `prod`og sjekk at loggen ikke inneholder logginnslaget.
 
@@ -57,7 +49,7 @@ Lambdafunksjoner kan trigges av ulike hendelser, f.eks. HTTP-kall eller opplasti
 
 API Gateway kan også kjøres lokalt. Kjør `sam local start-api` og bruk nettleseren, curl e.l. til å sende et HTTP-kall til adressen som blir skrevet ut i terminalen. Sjekk at responsen er den samme som i sted. SAM Local hot-reloader endringer som blir gjort i lambdaen slik at man slipper å restarte API Gateway. Sjekk at dette fungerer ved å endre meldingen som logges og lagre filen. Den nye meldingen skal nå logges i terminalen ved neste HTTP-kall.
 
-Nå skal vi teste ut lokal debugging. Legg til følgende konfigurasjon for debugging i Visual Studio Code (trykk "Debug" og "Open Configurations"):
+Nå skal vi teste ut lokal debugging. Legg til følgende konfigurasjon for debugging i Visual Studio Code (trykk "Debug" og "Open Configurations" i menyen):
 ```json
 {
 "name": "Attach to SAM Local",
