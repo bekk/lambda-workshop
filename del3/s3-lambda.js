@@ -8,8 +8,8 @@ exports.handler = (event, context, callback) => {
     console.log('Received event:', JSON.stringify(event));
 
     // TODO: Get S3 bucket name and key of uploaded file from event object
-    const bucket;
-    const key;
+    const bucket = '';
+    const key = '';
     const params = {
         Bucket: bucket,
         Key: key
