@@ -5,15 +5,16 @@ Serverless, eller [Function as a Service (FaaS)](https://stackify.com/function-a
 
 
 # Forberedelser
-Vi benytter oss av det råeste og nyeste AWS har å tilby av funksjoner. Det er derfor nødvendig å installere nyeste versjon av: 
-* Hvis du ikke har allerede, lag en [AWS-konto](https://aws.amazon.com/).
-* [aws-cli](https://aws.amazon.com/cli/?sc_channel=PS&sc_campaign=acquisition_ND&sc_publisher=google&sc_medium=command_line_b&sc_content=aws_cli_e&sc_detail=aws%20cli&sc_category=command_line&sc_segment=161194456247&sc_matchtype=e&sc_country=ND&s_kwcid=AL!4422!3!161194456247!e!!g!!aws%20cli&ef_id=V671xQAAACZf9KTq:20171119153001:s) (min 1.11). For å kjøre kommandoer opp mot AWS-kontoen din.
-* [docker](https://www.docker.com/) (nyeste versjon). For å kjøre lambda-funksjoner lokalt 💪
+Vi benytter oss av det råeste, nyeste AWS har å tilby av funksjonalitet. Internettkapasiteten på workshoppen er begrenset, det er derfor viktig at du på forhånd utfører følgende:
+
+1. Hvis du ikke har allerede, lag en [AWS-konto](https://aws.amazon.com/).
+2. Installer [aws-cli](https://aws.amazon.com/cli/?sc_channel=PS&sc_campaign=acquisition_ND&sc_publisher=google&sc_medium=command_line_b&sc_content=aws_cli_e&sc_detail=aws%20cli&sc_category=command_line&sc_segment=161194456247&sc_matchtype=e&sc_country=ND&s_kwcid=AL!4422!3!161194456247!e!!g!!aws%20cli&ef_id=V671xQAAACZf9KTq:20171119153001:s) (min 1.11). For å kjøre kommandoer opp mot AWS-kontoen din.
+3. Installer [docker](https://www.docker.com/) (nyeste versjon). For å kjøre lambda-funksjoner lokalt 💪
     * Sjekk at git-repoet er en undermappe av en av mappene som er i listen under fanen "File Sharing" i Docker sine innstillinger.
-* For å kjøre lambda-funksjoner trenger du å installere aws-sam local: ```npm install -g aws-sam-local ```. Verifiser at installasjonen var vellykket ved å kjøre ```sam --version```.
+4. For å kjøre lambda-funksjoner trenger du å installere aws-sam local: ```npm install -g aws-sam-local ```. Verifiser at installasjonen var vellykket ved å kjøre ```sam --version```.
 
 # Oppgave 1 - Hello World
-Lambda lar deg kjøre kode uten at du må forholde deg til servere. Du laster opp koden din, og Lambda tar seg av eksekvering og skalering. For å bli kjent med Lambda og hvordan det brukes starter vi med å lage en enkel lambda-funksjon i AWS Management Console. 
+For å bli kjent med Lambda og hvordan det brukes starter vi med å lage en enkel lambda-funksjon i AWS Management Console.
 
 ## Opprette Lambda-funksjon
 1. Gå til Lambda i [AWS Management Console](https://aws.amazon.com/). Velg `Create a function` og `Author from scratch`. Gi Lambda-funksjonen et navn.
