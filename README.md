@@ -18,33 +18,24 @@ For å bli kjent med Lambda og hvordan det brukes starter vi med å lage en enke
 
 ## Opprette Lambda-funksjon
 1. Gå til Lambda i [AWS Management Console](https://aws.amazon.com/). Velg `Create a function` og `Author from scratch`. Gi Lambda-funksjonen et navn.
-
-### Rolle
-2. Ved oppretting av Lambda-funksjonen må du angi en rolle. Rollen definerer tilgangene til funksjonen din. Dersom du har en eksisterende rolle med nødvendige tilganger kan denne brukes. 
-
-Oppretting av ny rolle gjøres ved å velge `create a custom role` og opprette rollen `lambda_basic_execution`. [Mer informasjon om rollene finner du her](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#lambda-intro-execution-role). Det kan ta noen minutter før rollen blir tilgjengelig.
+2. Bruk nyeste node.js som runtime.
+2. Ved oppretting av Lambda-funksjonen må du angi en rolle. Rollen definerer tilgangene til funksjonen din. Dersom du har en eksisterende rolle med nødvendige tilganger kan denne brukes. Oppretting av ny rolle gjøres ved å velge `create a custom role` og opprette rollen `lambda_basic_execution`. [Mer informasjon om rollene finner du her](https://docs.aws.amazon.com/lambda/latest/dg/intro-permission-model.html#lambda-intro-execution-role). Det kan ta noen minutter før rollen blir tilgjengelig.
 
 ## Teste lambda-funksjonen
-Lambdafunksjonen er nå opprettet og du kan kjøre den, endre koden og konfigurasjonen. Gjør deg kjent med hvilke konfigurasjonsendringer du har mulighet til å gjøre.
+Lambdafunksjonen er nå opprettet og du kan kjøre den, endre koden og konfigurasjonen. Du kan legge til en rekke triggers som bestemmer når funksjonen skal kjøre. I første omgang bruker vi testfunksjonaliteten til Lambda.
 
 
-### Test events
-3. Klikk på "Test"-knappen for å teste funksjonen. Opprett testevent og test lambda-funksjonen. Legg merke til hvilken informasjon som gis etter kjøringen. 
+1. Klikk på "Test"-knappen for å teste funksjonen. Opprett testevent og test lambda-funksjonen. Legg merke til hvilken informasjon som gis etter kjøringen.
+    * Feltene som angis i event-objektet er typisk knyttet til hvordan type trigger det er.
 
-Feltene som angis i eventen kan brukes i Lambdafunksjonen.
-
-4. Legg til et felt `navn` i testeventen. Endre på lambdafunksjonen slik at responsen inneholder navnet fra eventen.
-
-### Logging
-CloudWatch brukes for å håndtere logging, og du finner oversikt over logginnslagene under `Log Output`.
-
-5. Legg til logging i lambda-funksjonen din og test lambdafunksjonen på nytt. F.eks `console.log("Dev logging");`
+2. Legg til et feltene gold, silver and bronze i testeventen. Fyll inn [norges medaljestatiskk](https://www.vg.no/spesial/2018/ol/medaljer) fra OL.
+3. Endre på funksjonen slik at den printer ut det samlede antallet medaljer Norge fikk under OL.
 
 
 ### Miljøvariabler
 I Lambda Management Console har man mulighet til å spesifisere miljøvariabler (Environment Variables). Disse miljøvariablene er tilgjengelige fra lambda-funksjonen og gjør det mulig å endre konfigurasjonsinnstillinger uten å måtte gjøre kodeendringer.
 
-6. Opprett en miljøvariabel `environment` og gi den verdien `dev`. Endre lambdafunksjonen slik at logging kun skjer dersom environment er `dev`. 
+6. Opprett en miljøvariabel `environment` og gi den verdien `development`. Endre lambdafunksjonen slik at logging kun skjer dersom environment er `development`.
 
 7. Endre verdien på miljøvariabelen til f.eks `prod`og sjekk at loggen ikke inneholder logginnslaget.
 
