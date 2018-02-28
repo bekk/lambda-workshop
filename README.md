@@ -19,6 +19,7 @@ Vi benytter oss av det råeste, nyeste AWS har å tilby av funksjonalitet. Inter
 $ cd del2
 $ sam local generate-event api | sam local invoke 'ExampleFunction'
 ```
+Ikke bry deg om at outputen helt til slutt indikerer en feil. Det viktige er at docker imaget blir lastet ned. 
 
 # Oppgave 1 - Hello World
 For å bli kjent med Lambda og hvordan det brukes starter vi med å lage en enkel lambda-funksjon i AWS Management Console.
