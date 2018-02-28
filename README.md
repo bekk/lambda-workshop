@@ -13,7 +13,7 @@ Vi benytter oss av det råeste, nyeste AWS har å tilby av funksjonalitet. Inter
 3. [Konfigurer](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) aws-cli til å være sammenkoblet med din AWS-konto. 
 3. Installer [docker](https://www.docker.com/) (nyeste versjon). For å kjøre lambda-funksjoner lokalt 💪
     * Sjekk at git-repoet er en undermappe av en av mappene som er i listen under fanen "File Sharing" i Docker sine innstillinger.
-4. For å kjøre lambda-funksjoner trenger du å installere aws-sam local: ```npm install -g aws-sam-local ```. Verifiser at installasjonen var vellykket ved å kjøre ```sam --version```.
+4. For å kjøre lambda-funksjoner trenger du å installere aws-sam local: ```npm install -g aws-sam-local@0.2.6 ```. Verifiser at installasjonen var vellykket ved å kjøre ```sam --version```. NB! Vi bruker ikke nyeste versjon (0.2.7) ettersom debugging er brukket i den versjonen.
 5. Sørg for at docker imaget som brukes er lastet ned på forhånd ved å kjøre: 
 ```
 $ cd del2
